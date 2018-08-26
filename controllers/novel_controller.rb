@@ -18,47 +18,50 @@ class NovelController < Sinatra::Base
   end
 
   get '/new' do
-    @title = "New Post"
-    @post = Post.new
-
-
+    @title = "New Novel"
+    @novel = Novel.new
     erb :'novels/new'
   end
 
   post '/' do
-    post = Post.new
-    post.title = params[:title]
-    post.post_body = params[:post_body]
-    post.save
+    novel = Novel.new
+    novel.novel = params[:novel]
+    novel.novel_img = params[:novel_img]
+    novel.chapter_number = params[:chapter_number]
+    novel.chapter_title = params[:chapter_title]
+    novel.chapter_body = params[:chapter_body]
+    novel.save
     redirect "/"
   end
 
 
   get '/:id' do
     id = params[:id].to_i
-    @post = Post.find(id)
+    @novel = Novel.find(id)
     erb :'novels/show'
   end
 
   get '/:id/edit' do
-    @title= "Edit Post"
+    @title= "Edit Novel"
     id = params[:id].to_i
-    @post = Post.find(id)
+    @novel = Novel.find(id)
     erb :'novels/edit'
   end
 
   put '/:id' do
     id = params[:id].to_i
-    post = Post.find(id)
-    post.title = params[:title]
-    post.post_body = params[:post_body]
-    post.save
+    novel = Novel.find(id)
+    novel.novel_img = params[:novel_img]
+    novel.chapter_number = params[:chapter_number]
+    novel.chapter_title = params[:chapter_title]
+    novel.chapter_body = params[:chapter_body]
+    novel.save
     redirect "/"
   end
 
   delete '/:id' do
     id = params[:id].to_i
-    Post.destroy(id)
+    Novel.destroy(id)
     redirect "/"
   end
 
