@@ -7,13 +7,12 @@ class Novel
   end
 
   def save
-    conn = Post.open_connection
-
+    conn = Novel.open_connection
     if(!self.id)
       sql = "INSERT INTO novels (novel, novel_img, chapter_number,chapter_title,chapter_body) VALUES ('#{self.novel}','#{self.novel_img}','#{self.chapter_number}','#{self.chapter_title}','#{self.chapter_body}')"
       conn.exec(sql)
     else
-      sql = "UPDATE post SET novel='#{self.novel}' novel_img='#{self.novel_img}', chapter_number='#{self.chapter_number}',chapter_title='#{self.chapter_title}',chapter_body='#{self.chapter_body}' WHERE id= #{self.id}"
+      sql = "UPDATE novels SET novel='#{self.novel}', novel_img='#{self.novel_img}', chapter_number='#{self.chapter_number}',chapter_title='#{self.chapter_title}',chapter_body='#{self.chapter_body}' WHERE id= #{self.id}"
       conn.exec(sql)
     end
 
@@ -46,7 +45,9 @@ class Novel
   end
 
   def self.destroy(id)
-
+    conn = self.open_connection
+    sql = "DELETE FROM novels WHERE id = #{id}"
+    conn.exec(sql)
   end
 
   def self.hydrate(novel_data)

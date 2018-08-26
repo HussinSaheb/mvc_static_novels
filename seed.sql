@@ -1,14 +1,12 @@
 DROP TABLE IF EXISTS novels;
 
 CREATE TABLE novels (
-
   id SERIAL PRIMARY KEY,
   novel TEXT,
   novel_img TEXT,
   chapter_number Int,
   chapter_title VARCHAR(255),
   chapter_body TEXT
-
 );
 
 INSERT INTO novels (novel,novel_img ,chapter_number,chapter_title,chapter_body) VALUES ('I shall seal the heavens','http://novelmania.com.br/wp-content/uploads/2016/12/Patriarch-Reliance.jpg' , 1, 'Scholar Meng Hao', 'insert the chapter here');

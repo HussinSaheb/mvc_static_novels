@@ -5,7 +5,7 @@ class NovelController < Sinatra::Base
   # sets the view directory correctly.
   set :views, Proc.new{File.join(root,'views')}
 
-  set :public, Proc.new{File.join(root, 'public')}
+  set :public_folder, Proc.new{File.join(root, 'public')}
 
  # add this line to setup the reloader
   configure :development do
