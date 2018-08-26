@@ -1,0 +1,7 @@
+ <%@novels.each do |novel| %>
+ <h1> <a href="/"><%= novel.novel %></a></h1>
+  <div class="">
+    <h3><a href="<%= novel.id %>"><%= novel.chapter_number %><span class="space">:</span><%= novel.chapter_title %></a></h3>
+    <p><%=novel.chapter_body%></p>
+  </div>
+ <% end %>

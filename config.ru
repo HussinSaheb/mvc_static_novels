@@ -3,11 +3,11 @@ require 'sinatra/contrib'
 require 'sinatra/reloader' if development?
 require 'pry'
 require 'pg'
-require_relative './models/post.rb'
-require_relative './controllers/posts_controller.rb'
+require_relative './models/novel.rb'
+require_relative './controllers/novel_controller.rb'
 
 use Rack::Reloader
 use Rack::MethodOverride
 
 # direct the reuquest to the correct controller
-run PostsController
+run NovelController
