@@ -41,7 +41,7 @@ psql -d novels -f seed.sql
 ```
 This will create a table named novels in your database, and add 4 records to that table.
 
-### Rack
+### Rack
 Once Bundle has downloaded all the gems it needs and you've setup the Postgres database as aforementioned you can then follow it up with
 ```console
 rackup
