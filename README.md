@@ -48,4 +48,4 @@ rackup
 ```
 This will start the Ruby Web-server interface, which has its own middleware to handle our resources if the project expands to multiple resources.
 ### run on browser
-Finally on your browser, navigate to the url [localhost:9292/](localhost:9292/) which should then show you the entire website.
+Finally on your browser, navigate to the url [http://localhost:9292/](http://localhost:9292/) which should then show you the entire website.
