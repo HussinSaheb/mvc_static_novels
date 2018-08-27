@@ -5,13 +5,12 @@ class NovelController < Sinatra::Base
   # sets the view directory correctly.
   set :views, Proc.new{File.join(root,'views')}
 
-  set :public_folder, Proc.new{File.join(root, 'public')}
 
  # add this line to setup the reloader
   configure :development do
     register Sinatra::Reloader
   end
-  
+
   get "/" do
     @novels = Novel.all
     erb :'novels/index'
