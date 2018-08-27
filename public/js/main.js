@@ -1,19 +1,39 @@
 $(function(){
+
+  
   slideChapters();
   dayNight();
   fonts();
 
+  // loop over all the a tags with class link
+  $('.link').each(function(){
+    // get the injected href from ruby
+    // save it to variable
+    var link = $(this).attr('href')
+    // get this a tags parent slide/browser
+    // add onclick
+    $(this).parents('.slide').click(function(){
+      // redirect the users page to the correct page
+      document.location.replace("/"+link)
+    })
+  })
+
+
 
   function fonts() {
+    // add on clikc to div with id minusfont
     $('#minusFont').click(function(){
+      // get the current paragprah font size
       var fontSize = parseInt($("p").css("font-size"));
+      // decrease the paragraph fontsize
       fontSize = fontSize - 2 + "px";
-      $("p").css({'font-size':fontSize});
+      // apply the css rule
+      $("p").animate({'font-size':fontSize});
     })
     $('#plusFont').click(function(){
       var fontSize = parseInt($("p").css("font-size"));
       fontSize = fontSize + 2 + "px";
-      $("p").css({'font-size':fontSize});
+      $("p").animate({'font-size':fontSize});
     })
   }
   function slideChapters() {
@@ -23,7 +43,7 @@ $(function(){
       left: '-1000px'
     })
     // move the odd chapters into positions
-    $('.slide:nth-child(odd)').animate({left:'0px'}, 1500)
+    $('.slide:nth-child(odd)').animate({left:'0px'}, 500)
     // target the even and move them off screen
     $('.slide:nth-child(even)').css({
       position: 'relative',
@@ -32,18 +52,24 @@ $(function(){
     // move the even chapters back into screen
     $('.slide:nth-child(even)').animate({left:'0px'}, 1500)
   }
+
+
   function dayNight() {
     // setting the page to black on click
     $('#night').click(function(){
+      // when button clicked change the body rules
       $('body').css({
         backgroundColor: "black",
         color: "white"
       })
+      // set the buttons to be visisble
       $('.buttons').css({'borderColor': "white"})
+      // make the black a tags to white so you can see them
       $('a').css({
         color: 'white',
         textDecoration: 'underline'
       })
+      // same applies to nav
       $('nav').css({
         color: 'white',
         textDecoration: 'underline'

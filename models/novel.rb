@@ -18,6 +18,22 @@ class Novel
 
   end
 
+  def self.resource
+    conn = self.open_connection
+    sql = "SELECT DISTINCT novel FROM novels"
+    results = conn.exec(sql)
+    resources = Set.new
+    novels = results.map do |result|
+      if result['novel'].include? ' '
+        resources.add(result['novel'].gsub( ' ', '-'))
+      else
+          resources.add(result['novel'])
+      end
+    end
+    resources
+
+  end
+
   def self.all
     # create a connection
     conn = self.open_connection
