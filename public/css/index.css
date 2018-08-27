@@ -1,5 +1,5 @@
 body{
-  font-size: 1.5vw;
+  font-size: 2vmin;
 }
 h1 {
   font-size: 4.9vw;
@@ -9,12 +9,13 @@ h2 {
 }
 a{
   color:black;
-  font-size: 1.5vw;
+  font-size: 2vw;
   text-decoration: none;
-  transition: all 1s ease-in-out;
+  transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+ }
 }
 a:hover{
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 .slide{
   margin-top: 1vw;
@@ -29,14 +30,12 @@ width: 30vw;
 }
 
 .buttons{
-width: 70px;
-border-radius: 4px;
-border: 1px solid black;
-font-size: 20px;
-padding: none;
-text-align:center;
-display: inline-block;
-float:right;
+  width: 5vw;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 1vw;
+  padding: none;
+  float: right;
 }
 .buttons::selection{
   background: none;

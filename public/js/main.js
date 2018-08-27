@@ -1,6 +1,6 @@
 $(function(){
 
-  
+
   slideChapters();
   dayNight();
   fonts();
@@ -43,7 +43,7 @@ $(function(){
       left: '-1000px'
     })
     // move the odd chapters into positions
-    $('.slide:nth-child(odd)').animate({left:'0px'}, 500)
+    $('.slide:nth-child(odd)').animate({left:'0px'}, 1500)
     // target the even and move them off screen
     $('.slide:nth-child(even)').css({
       position: 'relative',
