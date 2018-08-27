@@ -55,16 +55,16 @@ $(function(){
 
 
   function dayNight() {
-    // setting the page to black on click
+    // setting the page to #30343a on click
     $('#night').click(function(){
       // when button clicked change the body rules
       $('body').css({
-        backgroundColor: "black",
+        backgroundColor: "#30343a",
         color: "white"
       })
       // set the buttons to be visisble
       $('.buttons').css({'borderColor': "white"})
-      // make the black a tags to white so you can see them
+      // make the #30343a a tags to white so you can see them
       $('a').css({
         color: 'white',
         textDecoration: 'underline'
@@ -79,16 +79,16 @@ $(function(){
     $('#day').click(function(){
       $('body').css({
         backgroundColor: "white",
-        color: "black"
+        color: "#30343a"
       })
       $('.buttons').css({
-        'borderColor': "black"
+        'borderColor': "#30343a"
       })
       $('a').css({
-        color: 'black'
+        color: '#30343a'
       })
       $('nav').css({
-        color: 'black'
+        color: '#30343a'
       })
     })
   }

@@ -8,10 +8,10 @@ h2 {
   font-size: 3.0vh;
 }
 a{
-  color:black;
+  color:#30343a;
   font-size: 2vw;
   text-decoration: none;
-  transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: all 1s ease-in-out;
  }
 }
 a:hover{
@@ -32,8 +32,9 @@ width: 30vw;
 .buttons{
   width: 5vw;
   border-radius: 4px;
-  border: 1px solid black;
+  border: 1px solid #30343a;
   font-size: 1vw;
+  text-align: center;
   padding: none;
   float: right;
 }
@@ -61,7 +62,7 @@ nav ul li {
 }
 nav ul li a{
   font-size: 2vw;
-  color:black;
+  color:#30343a;
   margin-left: 5px;
 }
 nav ul li:last-child{

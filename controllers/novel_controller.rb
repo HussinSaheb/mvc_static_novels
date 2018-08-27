@@ -11,12 +11,7 @@ class NovelController < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
-  # @resources =  Novel.resource
-  # @resources.each do |resource|
-  #   print resource
-  # end
-
-
+  
   get "/" do
     @novels = Novel.all
     erb :'novels/index'
