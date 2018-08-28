@@ -1,0 +1,20 @@
+<form action="/<%= @novel.id %>" method="post">
+  <div class="row">
+    <input type="text" name="chapter_number" placeholder="Chapter number" value="<%= @novel.chapter_number%>">
+  </div>
+  <div class="row">
+    <input type="text" name="chapter_title" placeholder="Chapter Title" value="<%= @novel.chapter_title %>">
+  </div>
+  <div class="row">
+    <input type="text" name="novel_img" placeholder="Icon to display on main page" value="<%= @novel.novel_img %>">
+  </div>
+  <div class="row">
+    <input type="text" name="chapter_body" placeholder="Chapter body" value="<%= @novel.chapter_body %>">
+  </div>
+  <div class="row">
+    <input type="submit" value="Save Chapter">
+  </div>
+  <% if @novel.id %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+</form>

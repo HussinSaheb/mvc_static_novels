@@ -1,0 +1,71 @@
+body{
+  font-size: 2vmin;
+}
+h1 {
+  font-size: 4.9vw;
+}
+h2 {
+  font-size: 3.0vh;
+}
+a{
+  color:#30343a;
+  font-size: 2vw;
+  text-decoration: none;
+  transition: all 1s ease-in-out;
+ }
+}
+a:hover{
+  font-size: 2.5vw;
+}
+.slide{
+  margin-top: 1vw;
+}
+.slide img{
+width: 20vw;
+transition: all 2s ease-in-out;
+}
+
+.slide img:hover{
+width: 30vw;
+}
+
+.buttons{
+  width: 5vw;
+  border-radius: 4px;
+  border: 1px solid #30343a;
+  font-size: 1vw;
+  text-align: center;
+  padding: none;
+  float: right;
+}
+.buttons::selection{
+  background: none;
+}
+input,label{
+  width: 80%;
+}
+input:placeholder-shown{
+  border-radius: 3px;
+  border:1px solid purple;
+}
+.delete{
+  display: inline;
+}
+.delete input{
+  width:10%;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a{
+  font-size: 2vw;
+  color:#30343a;
+  margin-left: 5px;
+}
+nav ul li:last-child{
+  padding-top: 2px;
+  margin-left: 30px;
+}
