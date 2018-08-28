@@ -1,7 +1,4 @@
 <form action="/<%= @novel.id %>" method="post">
-
-
-
   <div class="row">
     <input type="text" name="chapter_number" placeholder="Chapter number" value="<%= @novel.chapter_number%>">
   </div>
@@ -17,7 +14,6 @@
   <div class="row">
     <input type="submit" value="Save Chapter">
   </div>
-
   <% if @novel.id %>
     <input type="hidden" name="_method" value="PUT">
   <% end %>

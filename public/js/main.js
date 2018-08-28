@@ -18,8 +18,6 @@ $(function(){
     })
   })
 
-
-
   function fonts() {
     // add on clikc to div with id minusfont
     $('#minusFont').click(function(){

@@ -1,11 +1,11 @@
- <%@novels.each do |novel| %>
- <div class="row slide">
-  <div class="col-md-6 col-sm-12 col-xs-12">
-    <h3><a class='link' href="<%= novel.id %>"><%= novel.chapter_number %><span class="space">:</span><%= novel.chapter_title %></a></h3>
-    <p><%=novel.chapter_body[0..350]%></p>
+<%@novels.each do |novel| %>
+  <div class="row slide">
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <h3><a class='link' href="<%= novel.id %>"><%= novel.chapter_number %><span class="space">:</span><%= novel.chapter_title %></a></h3>
+      <p><%=novel.chapter_body[0..350]%></p>
+    </div>
+    <div class="col-md-6 hidden-sm hidden-xs">
+      <img src="<%= novel.novel_img %>" alt="image not found">
+    </div>
   </div>
-  <div class="col-md-6 hidden-sm hidden-xs">
-    <img src="<%= novel.novel_img %>" alt="image not found">
-  </div>
-</div>
- <% end %>
+<% end %>
